@@ -29,6 +29,16 @@ nav{
     flex-wrap: wrap;
 }
 
+nav h1 {
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+
+nav h1 span {
+    color: #ff004f;
+}
+
+
 nav ul li {
     display: inline-block;
     list-style: none;
@@ -69,4 +79,33 @@ nav ul li a:hover::after{
 .header-text h1 {
     font-size: 60px;
     margin-top: 20px;
+}
+
+.header-text h1 span{
+color: #ff004f;
+}
+
+/* About */
+#about{
+padding: 80px 0;
+color: #ababab;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2{
+    flex-basis: 35%;
 }
