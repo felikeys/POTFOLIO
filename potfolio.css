@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background: #000000;
     color: #fff;
@@ -29,7 +33,7 @@ nav{
     flex-wrap: wrap;
 }
 
-.icons{
+nav .icons, nav ul .icons{
     display: none;
 }
 
@@ -386,10 +390,11 @@ form .btn-2{
     font-size: 30px;
    }
 
-   .icons{
+   nav .icons, nav ul .icons{
     display: block;
     font-size: 25px;
-   }
+}
+
    nav ul {
     background: #ff004f;
     position: fixed;
