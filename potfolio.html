@@ -34,10 +34,133 @@
             <img src="images/user.png" />
           </div>
           <div class="about-col-2">
-            <h1>About Me</h1>
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              Creative, self-starting, and ambitious Front-End Developer with a
+              year oexperience. I specialize in website development for both
+              responsive e-commerce and a portfolio site, as well a simple image
+              slider using the react framework. I thrive in fast-paced,
+              collaborative environments and love turning design concepts into
+              functional, user-friendly interfaces.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-links" onclick="openTab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="openTab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="openTab('education')">Education</p>
+              <p class="tab-links" onclick="openTab('training')">Training</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>web developement <br /><span>image slider</span></li>
+                <li>
+                  web developement <br />
+                  <span>Load products using REST Api</span>
+                </li>
+                <!-- <li></li> -->
+              </ul>
+            </div>
+
+            <div class="tab-contents">
+              <ul>
+                <li>web developement <br /><span>image slider</span></li>
+                <li>
+                  web developement <br />
+                  <span>Load products using REST Api</span>
+                </li>
+                <!-- <li></li> -->
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>web developement <br /><span>image slider</span></li>
+                <li>
+                  web developement <br />
+                  <span>Load products using REST Api</span>
+                </li>
+                <!-- <li></li> -->
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>web developement <br /><span>image slider</span></li>
+                <li>
+                  web developement <br />
+                  <span>Load products using REST Api</span>
+                </li>
+                <!-- <li></li> -->
+              </ul>
+            </div>
+            <div class="tab-contents" id="training">
+              <ul>
+                <li>web developement <br /><span>image slider</span></li>
+                <li>
+                  web developement <br />
+                  <span>Load products using REST Api</span>
+                </li>
+                <!-- <li></li> -->
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- services -->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <h2>Responsive Web Design</h2>
+            <p>
+              I have an expertise in creating visually appealing and functional
+              websites that work seamlessly across different devices and screen
+              sizes. I also have the ability to design responsive layouts using
+              HTML, CSS, and JavaScript.
+            </p>
+          </div>
+          <div>
+            <h2>Front-End Developement</h2>
+            <p>
+              I have the ability to turn design mockups into interactive web
+              pages. I am proficient in front-end technologies such as React and
+              Angular. I am very commitment to pwriting good, clean and
+              maintainable code.
+            </p>
+          </div>
+          <div>
+            <h2>Website Optimization</h2>
+            <p>
+              I have skills in optimizing websites for speed and performance.
+              also techniques like image compression, lazy loading, and
+              minification. I am also have the ability to improve page load
+              times and enhance user satisfaction.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var tabLinks = document.getElementsByClassName("tab-links");
+      var tabContents = document.getElementsByClassName("tab-contents");
+
+      function openTab(tabName) {
+        for (tabLink of tabLinks) {
+          tabLink.classList.remove("active-links");
+        }
+        for (tabContent of tabContents) {
+          tabContent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-links");
+        document.getElementById(tabName).classList.add("active-tab");
+      }
+    </script>
   </body>
 </html>
