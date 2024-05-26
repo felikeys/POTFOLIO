@@ -57,7 +57,6 @@
                 Experience
               </p>
               <p class="tab-links" onclick="openTab('education')">Education</p>
-              <p class="tab-links" onclick="openTab('training')">Training</p>
             </div>
             <div class="tab-contents active-tab" id="skills">
               <ul>
@@ -70,12 +69,13 @@
               </ul>
             </div>
 
-            <div class="tab-contents">
+            <div class="tab-contents" id="experience">
               <ul>
-                <li>web developement <br /><span>image slider</span></li>
                 <li>
-                  web developement <br />
-                  <span>Load products using REST Api</span>
+                  Training <br /><span
+                    >Two years experience and a year training with Amalitech
+                    Ghana</span
+                  >
                 </li>
                 <!-- <li></li> -->
               </ul>
@@ -94,20 +94,18 @@
 
             <div class="tab-contents" id="education">
               <ul>
-                <li>web developement <br /><span>image slider</span></li>
                 <li>
-                  web developement <br />
-                  <span>Load products using REST Api</span>
+                  Senior High School <br /><span
+                    >Completed in June 2013 at Nsaba senior High <br />offered
+                    science</span
+                  >
                 </li>
-                <!-- <li></li> -->
-              </ul>
-            </div>
-            <div class="tab-contents" id="training">
-              <ul>
-                <li>web developement <br /><span>image slider</span></li>
                 <li>
-                  web developement <br />
-                  <span>Load products using REST Api</span>
+                  University <br />
+                  <span
+                    >Offered Mechanical Engineering at Takoradi Technical
+                    University <br />Completed in June 2019</span
+                  >
                 </li>
                 <!-- <li></li> -->
               </ul>
@@ -165,18 +163,27 @@
         <h1 class="sub-title">My Work</h1>
         <div class="work-list">
           <div class="work">
-            <img src="images/work-1.png" alt="" />
+            <img src="images/tic-tac-toe.webp" alt="" />
             <div class="layer">
-              <h3>Socila Media</h3>
-              <p>The app is a socila media fdfhkk ifhuafhanf afiaufaiofaufha</p>
+              <h3>TIC TAC TOE</h3>
+              <p>
+                A fun game that nurishes the mind and keeps you on your toes.
+                Building a tic-tac-toe game involves key programming concepts
+                like loops, conditionals, and data structures. It’s a great way
+                to reinforce your understanding of these fundamental principle
+              </p>
               <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
             </div>
           </div>
           <div class="work">
             <img src="images/work-2.png" alt="" />
             <div class="layer">
-              <h3>Socila Media</h3>
-              <p>The app is a socila media fdfhkk ifhuafhanf afiaufaiofaufha</p>
+              <h3>Load Products</h3>
+              <p>
+                This web application was created with the react frame work. It
+                functionality is to load products on the web page. It created
+                using REST Api
+              </p>
               <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
             </div>
           </div>
@@ -184,13 +191,17 @@
           <div class="work">
             <img src="images/work-3.png" alt="" />
             <div class="layer">
-              <h3>Socila Media</h3>
-              <p>The app is a socila media fdfhkk ifhuafhanf afiaufaiofaufha</p>
+              <h3>Image Slider</h3>
+              <p>
+                The web application was created to show a simple functionality
+                of a sliding image on the screen and also to pratice more on the
+                usage of the React frame work
+              </p>
               <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
             </div>
           </div>
         </div>
-        <a href="#" class="btn">See more</a>
+        <!-- <a href="#" class="btn">See more</a> -->
       </div>
     </div>
 
@@ -212,7 +223,7 @@
             >
           </div>
           <div class="contact-right">
-            <form>
+            <form name="submit-to-google-sheet">
               <input type="text" name="Name" placeholder="your name" required />
               <input
                 type="email"
@@ -261,6 +272,19 @@
       function closeMenu() {
         sideMenu.style.right = "-200px";
       }
+    </script>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbz8sZqoOsfTqiXke5TZFfQGggMGNGMp9ZLIX5diLwbU70Eg8PLlwDnrNcnSpfEjfche/exec";
+      const form = document.forms["submit-to-google-sheet"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => console.log("Success!", response))
+          .catch((error) => console.error("Error!", error.message));
+      });
     </script>
   </body>
 </html>
